@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<title>Operation: Ascent — Push-Up Field Manual</title>
+<meta name="theme-color" content="#ece5d2">
+<meta name="apple-mobile-web-app-title" content="Ascent">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="dossier-header">
+    <div class="header-top">
+      <div class="brand">
+        <span class="brand-mark">&#8593;</span>
+        <div class="brand-text">
+          <h1>Operation: Ascent</h1>
+          <p>Adaptive Push-Up Deployment</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="btn-mute" class="btn-ghost" type="button" title="Toggle sound">🔊</button>
+        <button id="btn-save" class="btn-ghost" type="button">Save</button>
+        <button id="btn-load" class="btn-ghost" type="button">Load</button>
+        <input type="file" id="file-load" accept="application/json" hidden>
+      </div>
+    </div>
+    <nav class="tabs" aria-label="Main navigation">
+      <button class="tab active" data-screen="home" type="button">Home</button>
+      <button class="tab" data-screen="log" type="button">Mission Log</button>
+      <button class="tab" data-screen="duel" type="button">Duel</button>
+      <button class="tab" data-screen="stats" type="button">Stats</button>
+      <button class="tab" data-screen="medals" type="button">Achievements</button>
+      <button class="tab" data-screen="manual" type="button">Field Manual</button>
+      <button class="tab" data-screen="settings" type="button">Settings</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="screen-home" class="screen active"></section>
+    <section id="screen-log" class="screen"></section>
+    <section id="screen-duel" class="screen"></section>
+    <section id="screen-stats" class="screen"></section>
+    <section id="screen-medals" class="screen"></section>
+    <section id="screen-manual" class="screen"></section>
+    <section id="screen-settings" class="screen"></section>
+  </main>
+
+  <div id="modal" class="modal-overlay hidden"><div class="modal-panel" id="modal-panel"></div></div>
+  <div id="confetti-layer" class="confetti-layer" aria-hidden="true"></div>
+  <div id="toast" class="toast"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
